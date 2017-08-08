@@ -2,7 +2,7 @@ tasks=[]
 deleted=[]
 def ask_input():
         print("\n")
-        user_input = input("Type in a command, or type -help for more details.")
+        user_input = input("Type in a command, or type -help for more details.\n")
         process_input(user_input)
 def process_input(user_input):
         if user_input[0]=="'" and user_input[len(user_input)-1] =="'":
@@ -39,7 +39,7 @@ def list_task():
 def listdel_task():
         if len(deleted)>0:
                 print("\n")
-                print("Index \t Task")
+                print("Index \t Deleted Task")
                 for i in range(0, len(deleted)):
                         print(str(i)+"\t"+str(deleted[i]))
                         print("\n")
