@@ -21,6 +21,7 @@ def list_task():
                 print(str(i)+"\t"+str(tasks[i]))
         ask_input()
 def delete_task(index):
+        index=int(index)
         if index>=len(tasks) or index<0:
                 print("index out of bounds")
         else:
