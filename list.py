@@ -14,6 +14,7 @@ def process_input(user_input):
                 print("error in input, please try again")
                 ask_input()
 def add_task(user_input):
+        print(str(user_input)+" has been added.")
         tasks.append(user_input)
         ask_input()
 def list_task():
