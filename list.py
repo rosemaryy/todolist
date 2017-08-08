@@ -1,5 +1,5 @@
 tasks=[]
-def ask_input:
+def ask_input():
  	user_input = input("Enter a task in single quotes, list all tasks and task indices by typing -list, and delete a task by typing -del(index).")
  	process_input(user_input)
 def process_input(user_input):
