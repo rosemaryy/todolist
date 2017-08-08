@@ -18,13 +18,13 @@ def add_task(user_input):
 def list_task():
         print("Index \t Task")
         for i in range(0, len(tasks)):
-                print(i+"\t"+tasks[i])
+                print(str(i)+"\t"+str(tasks[i]))
         ask_input()
 def delete_task(index):
         if index>=len(tasks) or index<0:
                 print("index out of bounds")
         else:
-                print(tasks[index]+" has been deleted")
+                print(str(tasks[index])+" has been deleted")
                 tasks.remove(tasks[index])
         ask_input()  
 ask_input()
