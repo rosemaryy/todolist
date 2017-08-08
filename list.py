@@ -8,7 +8,7 @@ def process_input(user_input):
   	elif user_input.lower()=="-list":
   		list_task()
   	elif user_input[0:5].lower()=="-del(" and user_input[len(user_input)-1]==")" and user_input[5:len(user_input)-1].isdigit():
-    	delete_task(user_input[5:len(user_input)-1])
+    		delete_task(user_input[5:len(user_input)-1])
 	else:
     	print("error in input, please try again")
 	ask_input()
@@ -23,7 +23,7 @@ def list_task():
 def delete_task(index):
 	if index>=len(tasks) or index<0:
 		print("index out of bounds")
-    else:
+    	else:
 		print(tasks[index]+" has been deleted")
 		tasks.remove(tasks[index])
 	ask_input()  
