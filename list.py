@@ -1,8 +1,7 @@
 tasks=[]
 def ask_input():
         print("\n")
-        user_input = input("Enter a task in single quotes, list all tasks and task indices by typing -list, and delete a task by typing -del(index).")
-        print("\n")
+        user_input = input("Enter a task in single quotes, list all tasks and task indices by typing -list, and delete a task by typing -del(index). \n")
         process_input(user_input)
 def process_input(user_input):
         if user_input[0]=="'" and user_input[len(user_input)-1] =="'":
@@ -19,7 +18,8 @@ def add_task(user_input):
         ask_input()
 def list_task():
         if len(tasks)>0:
-                print("\n Index \t Task")
+                print("\n")
+                print("Index \t Task")
                 for i in range(0, len(tasks)):
                         print(str(i)+"\t"+str(tasks[i]))
                         print("\n")
