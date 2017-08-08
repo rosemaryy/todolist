@@ -49,9 +49,9 @@ def listdel_task():
 def delete_task(index):
         index=int(index)
         if index>=len(tasks) or index<0:
-                print("index out of bounds. \n")
+                print("index out of bounds.")
         else:
-                print(str(tasks[index])+" has been deleted. \n")
+                print(str(tasks[index])+" has been deleted.")
                 deleted.append(tasks[index])
                 tasks.remove(tasks[index])
         ask_input()  
