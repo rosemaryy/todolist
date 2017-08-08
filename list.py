@@ -32,7 +32,6 @@ def list_task():
                 print("Index \t Task")
                 for i in range(0, len(tasks)):
                         print(str(i)+"\t"+str(tasks[i]))
-                        print("\n")
         else:
                 print("You currently have 0 tasks.")
         ask_input()
@@ -42,7 +41,6 @@ def listdel_task():
                 print("Index \t Deleted Task")
                 for i in range(0, len(deleted)):
                         print(str(i)+"\t"+str(deleted[i]))
-                        print("\n")
         else:
                 print("You have not deleted any tasks.")
         ask_input()
