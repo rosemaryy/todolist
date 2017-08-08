@@ -1,6 +1,6 @@
 tasks=[]
 def ask_input():
-        user_input = input("Enter a task in single quotes, list all tasks and task indices by typing -list, and delete a task by typing -del(index).")
+        user_input = input("Enter a task in single quotes, list all tasks and task indices by typing -list, and delete a task by typing -del(index). \n")
         process_input(user_input)
 def process_input(user_input):
         if user_input[0]=="'" and user_input[len(user_input)-1] =="'":
@@ -16,14 +16,17 @@ def add_task(user_input):
         tasks.append(user_input)
         ask_input()
 def list_task():
-        print("Index \t Task")
-        for i in range(0, len(tasks)):
-                print(str(i)+"\t"+str(tasks[i]))
+        if len(tasks)>0:
+                print("Index \t Task")
+                for i in range(0, len(tasks)):
+                        print(str(i)+"\t"+str(tasks[i]))
+        else:
+                print("You currently have 0 tasks.")
         ask_input()
 def delete_task(index):
         index=int(index)
         if index>=len(tasks) or index<0:
-                print("index out of bounds")
+                print("index out of bounds.")
         else:
                 print(str(tasks[index])+" has been deleted")
                 tasks.remove(tasks[index])
